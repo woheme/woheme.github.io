@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hadoop生态圈,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="##我与Hadoop对Hadoop最初的了解是在两年前，那时候刚刚研一。当时对于Hadoop充满好奇，可是由于学业还有项目的原因自己迟迟没有去好好的研究下Hadoop。研二由于论文选题的方向是Nosql才有了真正去接触Hadoop的机会。这期间对Hadoop的了解也是时断时续，之所以会这样，主要是因为Hadoop自己本身并不是很成熟，还有就是网上的学习资源也是参差不齐。再加上自己又和同门接了个项目">
+<meta name="keywords" content="Hadoop生态圈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习Hadoop">
+<meta property="og:url" content="http://chenshiqiang.site/2014/10/23/学习Hadoop/index.html">
+<meta property="og:site_name" content="ChenShiqiang&#39;s blog">
+<meta property="og:description" content="##我与Hadoop对Hadoop最初的了解是在两年前，那时候刚刚研一。当时对于Hadoop充满好奇，可是由于学业还有项目的原因自己迟迟没有去好好的研究下Hadoop。研二由于论文选题的方向是Nosql才有了真正去接触Hadoop的机会。这期间对Hadoop的了解也是时断时续，之所以会这样，主要是因为Hadoop自己本身并不是很成熟，还有就是网上的学习资源也是参差不齐。再加上自己又和同门接了个项目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/hadoop%E7%94%9F%E6%80%81%E5%9C%88Hadoop%E7%94%9F%E6%80%81%E5%9C%88.JPG">
+<meta property="og:image" content="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/HDFS%E6%9E%B6%E6%9E%84.JPG">
+<meta property="og:image" content="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/MapReduce%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8BMapReduce%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.JPG">
+<meta property="og:updated_time" content="2019-01-12T14:51:52.515Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习Hadoop">
+<meta name="twitter:description" content="##我与Hadoop对Hadoop最初的了解是在两年前，那时候刚刚研一。当时对于Hadoop充满好奇，可是由于学业还有项目的原因自己迟迟没有去好好的研究下Hadoop。研二由于论文选题的方向是Nosql才有了真正去接触Hadoop的机会。这期间对Hadoop的了解也是时断时续，之所以会这样，主要是因为Hadoop自己本身并不是很成熟，还有就是网上的学习资源也是参差不齐。再加上自己又和同门接了个项目">
+<meta name="twitter:image" content="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/hadoop%E7%94%9F%E6%80%81%E5%9C%88Hadoop%E7%94%9F%E6%80%81%E5%9C%88.JPG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://chenshiqiang.site/2014/10/23/学习Hadoop/">
+
+
+
+
+
+  <title>学习Hadoop | ChenShiqiang's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ChenShiqiang's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://chenshiqiang.site/2014/10/23/学习Hadoop/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈仕强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ChenShiqiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习Hadoop</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-10-23T09:33:39+08:00">
+                2014-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">Hadoop</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##我与Hadoop<br>对Hadoop最初的了解是在两年前，那时候刚刚研一。当时对于Hadoop充满好奇，可是由于学业还有项目的原因自己迟迟没有去好好的研究下Hadoop。研二由于论文选题的方向是Nosql才有了真正去接触Hadoop的机会。这期间对Hadoop的了解也是时断时续，之所以会这样，主要是因为Hadoop自己本身并不是很成熟，还有就是网上的学习资源也是参差不齐。再加上自己又和同门接了个项目再弄，所以感觉对Hadoop的学习并不是非常系统和深入。一个偶然的机会看了吴超的视频才有了真正向系统学习下Hadoop的决心，甚至花了一千大洋买了整个Hadoop系列的视频。<br><a id="more"></a></p>
+<p>###Hadoop生态圈<br>把吴超的Hadoop视频看的差不多了，对整个Hadoop生态圈有了大致的了解。在这里准备总结下这几天看的也算是加深下自己的印象。<br><img src="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/hadoop%E7%94%9F%E6%80%81%E5%9C%88Hadoop%E7%94%9F%E6%80%81%E5%9C%88.JPG" alt="该图片来自http://my.oschina.net/leejun2005/blog/82699"><br>该图片来自<a href="http://my.oschina.net/leejun2005/blog/82699" target="_blank" rel="noopener">http://my.oschina.net/leejun2005/blog/82699</a></p>
+<p>这个生态圈中的数据分析、统计和挖掘模块我只学了Hive和Pig，对Mahout还不是很了解，Mahout将是我下一个要深入了解的对象。</p>
+<p>####HDFS<br>整个Hadoop系统得以运行全靠底层的分布式文件系统HDFS，HDFS是一种能够运行在大量廉价硬件上的<strong>分布式文件系统</strong>，它不仅具有分布式文件系统的大量优点，而且还做了许多改善：具有<strong>高容错</strong>性，对硬件性能要求不高，可以实现<strong>高吞吐量</strong>的数据访问，特别适合运用在超大规模数据集上。<br><img src="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/HDFS%E6%9E%B6%E6%9E%84.JPG" alt=""></p>
+<p>####MapReduce<br>MapReduce是一个<strong>分布式计算框架</strong>，负责对大数据进行处理，其中Map，对数据集上的独立元素进行指定的操作，生成键-值对形式中间结 果。Reduce，则对中间结果中相同“键”的所有“值”进行规约，以得到最终结果。MapReduce这样的功能划分，非常适合在大量计算机组成的分布 式并行环境里进行数据处理。<br><img src="http://chenshiqiangsite.oss-cn-beijing.aliyuncs.com/MapReduce%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8BMapReduce%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.JPG" alt=""><br>该图片来自<a href="http://www.thebigdata.cn/Hadoop/11944.html" target="_blank" rel="noopener">http://www.thebigdata.cn/Hadoop/11944.html</a></p>
+<p>####Hive（基于Hadoop的数据仓库）<br>由facebook开源，最初用于解决海量结构化的日志数据统计问题。Hive定义了一种类似SQL的查询语言(HQL), 将SQL转化MapReduce任务在Hadoop上执行。通常用于离线分析。</p>
+<p>####Hbase（分布式列存数据库）<br>源自Google的Bigtable论文，发表于2006年11月，HBase是Google Bigtable克隆版。HBase是一个针对结构化数据的可伸缩、高可靠、高性能、分布式和面向列的动态模式数据库。 和传统关系数据库不同，HBase采用了BigTable的数据模型：增强的稀疏排序映射表（Key/Value），其中，键由行关键字、列关键字和时间 戳构成。HBase提供了对大规模数据的随机、实时读写访问，同时，HBase中保存的数据可以使用MapReduce来处理，它将数据存储和并行计算完 美地结合在一起。<br>数据模型：Schema–&gt;Table–&gt;Column Family–&gt;Column–&gt;RowKey–&gt;TimeStamp–&gt;Value</p>
+<p>####Zookeeper（分布式协作服务）<br>源自Google的Chubby论文，发表于2006年11月，Zookeeper是Chubby克隆版。解决分布式环境下的数据管理问题：统一命名，状态同步，集群管理，配置同步等。</p>
+<p>####Sqoop（数据同步工具）<br> Sqoop是SQL-to-Hadoop的缩写，主要用于传统数据库和Hadoop之前传输数据。数据的导入和导出本质上是Mapreduce程序，充分利用了MR的并行化和容错性。</p>
+<p>####Pig（基于Hadoop的数据流系统）<br> 由yahoo!开源，设计动机是提供一种基于MapReduce的ad-hoc(计算在query时发生)数据分析工具，定义了一种数据流语言—Pig Latin，将脚本转换为MapReduce任务在Hadoop上执行。通常用于进行离线分析。</p>
+<p>####Mahout（数据挖掘算法库）<br>Mahout起源于2008年，最初是Apache Lucent的子项目，它在极短的时间内取得了长足的发展，现在是Apache的顶级项目。Mahout 的主要目标是创建一些可扩展的机器学习领域经典算法的实现，旨在帮助开发人员更加方便快捷地创建智能应用程序。Mahout现在已经包含了聚类、分类、推 荐引擎（协同过滤）和频繁集挖掘等广泛使用的数据挖掘方法。除了算法，Mahout还包含数据的输入/输出工具、与其他存储系统（如数据库、 MongoDB 或Cassandra）集成等数据挖掘支持架构。</p>
+<p>####Flume（日志收集工具）<br>Cloudera开源的日 志收集系统，具有分布式、高可靠、高容错、易于定制和扩展的特点。它将数据从产生、传输、处理并最终写入目标的路径的过程抽象为数据流，在具体的数据流 中，数据源支持在Flume中定制数据发送方，从而支持收集各种不同协 议数据。同时，Flume数据流提供对日志数据进行简单处理的能力，如过滤、格式转换等。此外，Flume还具有能够将日志写往各种数据目标（可定制）的 能力。总的来说，Flume是一个可扩展、适合复杂环境的海量日志收集系统。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hadoop生态圈/" rel="tag"># Hadoop生态圈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/09/26/最近的计划/" rel="next" title="最近的计划">
+                <i class="fa fa-chevron-left"></i> 最近的计划
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/11/01/最近做的O2O项目/" rel="prev" title="最近做的O2O项目">
+                最近做的O2O项目 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">陈仕强</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈仕强</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
