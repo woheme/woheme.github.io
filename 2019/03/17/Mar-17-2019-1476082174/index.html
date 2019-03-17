@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="syntax = “proto2”; message VehicleParam{    optional int32 serviceId = 1;            //服务ID    //01–Vehcle activate                      –车辆激活    //02–Vehcle Deactivate                    –车辆停用    //0">
+<meta property="og:type" content="article">
 <meta property="og:title" content="ChenShiqiang&#39;s blog">
-<meta property="og:url" content="http://chenshiqiang.site/archives/2015/02/index.html">
+<meta property="og:url" content="http://chenshiqiang.site/2019/03/17/Mar-17-2019-1476082174/index.html">
 <meta property="og:site_name" content="ChenShiqiang&#39;s blog">
+<meta property="og:description" content="syntax = “proto2”; message VehicleParam{    optional int32 serviceId = 1;            //服务ID    //01–Vehcle activate                      –车辆激活    //02–Vehcle Deactivate                    –车辆停用    //0">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-17T01:04:57.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ChenShiqiang&#39;s blog">
+<meta name="twitter:description" content="syntax = “proto2”; message VehicleParam{    optional int32 serviceId = 1;            //服务ID    //01–Vehcle activate                      –车辆激活    //02–Vehcle Deactivate                    –车辆停用    //0">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://chenshiqiang.site/archives/2015/02/">
+  <link rel="canonical" href="http://chenshiqiang.site/2019/03/17/Mar-17-2019-1476082174/">
 
 
 
 
 
-  <title>归档 | ChenShiqiang's blog</title>
+  <title> | ChenShiqiang's blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -234,72 +238,177 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 24 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2015">2015</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://chenshiqiang.site/2019/03/17/Mar-17-2019-1476082174/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈仕强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ChenShiqiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2015/02/28/带外婆回家/" itemprop="url">
-              
-                <span itemprop="name">带外婆回家</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2015-02-28T17:53:32+08:00" content="2015-02-28">
-          02-28
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T09:04:57+08:00">
+                2019-03-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>syntax = “proto2”;</p>
+<p>message VehicleParam{<br>    optional int32 serviceId = 1;            //服务ID<br>    //01–Vehcle activate                      –车辆激活<br>    //02–Vehcle Deactivate                    –车辆停用<br>    //03–Configuration data update            –配置数据更新<br>    //04–Remote control inhibition            –远程控制<br>    //05–Remote lock door                     –远程锁车门<br>    //06–Remote unlock door                   –远程解锁车门<br>    //07–Remote lock trunk                    –远程锁后备箱门<br>    //08–Remote unlock trunk                  –远程解锁后备箱门<br>    //09–Remote engine start                  –远程发动机启动<br>    //10–Remote Vehicle Immobilization        –远程车辆锁定<br>    //11–Remote honk horn                     –远程遥控喇叭<br>    //12–Remote flash lights                  –远程闪光灯<br>    //13–Remote operate window                –远程遥控车窗<br>    //14–ECall                                –ECall<br>    //15–BCall                                –BCall<br>    //16–SVT Start                            –SVT Start<br>    //17–SVT End                              –SVT End<br>    //18–Send to car                          –Send to car<br>    //19–Remote diagnostics                   –远程诊断<br>    optional BasicParam basicParam     = 2;            // 车辆基本信息<br>    optional EngineStatus engineStatus = 3;            // 发动机状态<br>    optional Position position         = 4;            // 位置信息<br>    optional ChargeStatus chargeStatus = 5;            // 充电信息</p>
+<pre><code>message BasicParam{
+    optional int32   plantNum      = 1;
+    optional int32   vehicleType   = 2;
+    optional bool    IsEV          = 3;
+    optional string  vin           = 4;
+}
+
+enum EngineStatus{
+    ES_ON = 1;
+    ES_OFF = 2;
+    ES_Other = 3;
+    ES_Error = 4;
+    ES_Null = 9;
+}
+
+message Position{
+    optional int32 latitude = 1;
+    optional int32 longitude = 2;
+    optional int32 courseAngle = 3;
+    optional int32 slope = 4;
+    optional int32 curvature = 5;
+    optional int32 laneNum = 6;
+    optional int32 laneShape = 7;
+    optional int32 laneWidth = 8;
+}
+
+enum ChargeStatus{
+    CS_StopCharge = 1;
+    CS_RunCharge = 2;
+    CS_NoCharge = 3;
+    CS_ChargeFinish = 4;
+    CS_Error = 5;
+    CS_Null = 9;
+}
+</code></pre><p>}</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/26/2019年2月26日-看《小偷家族》有感/" rel="next" title="看《小偷家族》有感">
+                <i class="fa fa-chevron-left"></i> 看《小偷家族》有感
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -307,6 +416,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -543,6 +656,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
