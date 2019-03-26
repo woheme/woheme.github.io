@@ -249,162 +249,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chenshiqiang.site/2019/03/17/Mar-17-2019-1476082174/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈仕强">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ChenShiqiang's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/17/Mar-17-2019-1476082174/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T09:04:57+08:00">
-                2019-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>syntax = “proto2”;</p>
-<p>message VehicleParam{<br>    optional int32 serviceId = 1;            //服务ID<br>    //01–Vehcle activate                      –车辆激活<br>    //02–Vehcle Deactivate                    –车辆停用<br>    //03–Configuration data update            –配置数据更新<br>    //04–Remote control inhibition            –远程控制<br>    //05–Remote lock door                     –远程锁车门<br>    //06–Remote unlock door                   –远程解锁车门<br>    //07–Remote lock trunk                    –远程锁后备箱门<br>    //08–Remote unlock trunk                  –远程解锁后备箱门<br>    //09–Remote engine start                  –远程发动机启动<br>    //10–Remote Vehicle Immobilization        –远程车辆锁定<br>    //11–Remote honk horn                     –远程遥控喇叭<br>    //12–Remote flash lights                  –远程闪光灯<br>    //13–Remote operate window                –远程遥控车窗<br>    //14–ECall                                –ECall<br>    //15–BCall                                –BCall<br>    //16–SVT Start                            –SVT Start<br>    //17–SVT End                              –SVT End<br>    //18–Send to car                          –Send to car<br>    //19–Remote diagnostics                   –远程诊断<br>    optional BasicParam basicParam     = 2;            // 车辆基本信息<br>    optional EngineStatus engineStatus = 3;            // 发动机状态<br>    optional Position position         = 4;            // 位置信息<br>    optional ChargeStatus chargeStatus = 5;            // 充电信息</p>
-<pre><code>message BasicParam{
-    optional int32   plantNum      = 1;
-    optional int32   vehicleType   = 2;
-    optional bool    IsEV          = 3;
-    optional string  vin           = 4;
-}
-
-enum EngineStatus{
-    ES_ON = 1;
-    ES_OFF = 2;
-    ES_Other = 3;
-    ES_Error = 4;
-    ES_Null = 9;
-}
-
-message Position{
-    optional int32 latitude = 1;
-    optional int32 longitude = 2;
-    optional int32 courseAngle = 3;
-    optional int32 slope = 4;
-    optional int32 curvature = 5;
-    optional int32 laneNum = 6;
-    optional int32 laneShape = 7;
-    optional int32 laneWidth = 8;
-}
-
-enum ChargeStatus{
-    CS_StopCharge = 1;
-    CS_RunCharge = 2;
-    CS_NoCharge = 3;
-    CS_ChargeFinish = 4;
-    CS_Error = 5;
-    CS_Null = 9;
-}
-</code></pre><p>}</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://chenshiqiang.site/2019/02/26/2019年2月26日-看《小偷家族》有感/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1714,6 +1558,154 @@ enum ChargeStatus{
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://chenshiqiang.site/2015/06/08/关于职业规划/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈仕强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ChenShiqiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/06/08/关于职业规划/" itemprop="url">关于职业规划</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-06-08T21:41:32+08:00">
+                2015-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>最近陆陆续续看了些有关职业规划方面的书和文章，最大的感触就是<strong>一个好的职业规划能让我们不迷茫的继续向前走</strong>。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/06/08/关于职业规划/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1764,7 +1756,7 @@ enum ChargeStatus{
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
